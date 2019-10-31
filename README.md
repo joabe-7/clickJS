@@ -1,2 +1,2 @@
 # clickJS
-Events: click, mouseente, mouseout, created with javascript
+Events: click, mouseenter, mouseout, created with javascript
