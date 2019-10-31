@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ClckJS</title>
+    <style>
+       div#area{
+           font: normal 40pt Arial;
+           background:green;
+           color: honeydew;
+           width: 200px;
+           height: 200px;
+           line-height: 200px;
+           text-align: center;
+           display: flex;
+           justify-content: center;
+           align-items: center; 
+           padding: 50px 50px;
+           border-radius: 1rem;
+           position: absolute; top: 11rem; left: 34rem;
+           
+       }   
+    </style>
+</head>
+<body>    
+
+
+<!--podemos disparar o evento no html a tag do evento ficaria assim: 
+        <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">-->
+
+<!--ou podemos disparar o evento usando listener dentro do proprio javascrips a tag do evento ficaria assim:
+        <div id="area">
+temos que adicionar todos os listeners no js os comandos que ficavam na div passam para o js e ele vai tratar os comandos ex:
+         a.addEventListener('click', clicar)
+         a.addEventListener('mouseenter', entrar)
+         a.addEventListener('mouseout', sair)-->
+
+
+
+         
+
+<!--codigo-->
+    <div id="area">
+interaja...
+    </div>
+
+    <script>
+
+    var a = window.document.getElementById('area')
+    a.addEventListener('click', clicar)
+    a.addEventListener('mouseenter', entrar)
+    a.addEventListener('mouseout', sair)
+        function clicar(){
+            
+            a.innerText = 'clicou'
+            a.style.background = 'red'
+        }
+
+        function entrar(){
+            
+            a.innerText = 'entrou'
+        
+        }
+
+        function sair(){
+            a.innerText = 'saiu'
+            a.style.background = 'green'
+        }
+    </script>
+</body>
+</html>
